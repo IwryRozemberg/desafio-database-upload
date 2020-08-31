@@ -51,8 +51,8 @@ class ImportTransactionsService {
             from_line: 2,
             trim: true,
             columns: ['title', 'type', 'value', 'category'],
-            delimiter: ',',
-            skip_empty_lines: true,
+            // delimiter: ';',
+            // skip_empty_lines: true,
             cast: (value, context) => {
               if (context.index === 2) {
                 return parseFloat(
