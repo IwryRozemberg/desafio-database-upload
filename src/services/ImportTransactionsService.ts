@@ -57,7 +57,7 @@ class ImportTransactionsService {
     const fullCategories = [...newCategories, ...existentCategories];
 
     const transactionsRepository = getCustomRepository(TransactionsRepository);
-    const createdTransactions = await transactionsRepository.create(
+    const createdTransactions = transactionsRepository.create(
       transactions.map(transaction => ({
         title: transaction.title,
         type: transaction.type,
